@@ -8,6 +8,11 @@ Note that build 228 was the last version supporting Python 2.
 
 Since build 304:
 ----------------
+* service registration had an overhaul, avoiding a complicated, and ultimately
+  unnecessary "single globally registered service runner" concept.
+  Now, when registering a service, the host pythonservice.exe runner will be
+  copied to `sys.exec_prefix`, along with possibly `pywintypesXX.dll` and run
+  from there. (#1908)
 
 Since build 303:
 ----------------
